@@ -3,7 +3,7 @@
     <h1 align="center">Cloud Mail</h1>
     <p align="center">Cloudflare Workers üzerinde çalışmak üzere tasarlanmış basit, duyarlı bir e-posta hizmeti 🎉</p> 
     <p align="center">
-       <a href="/README-en.md" style="margin-left: 5px">Türkçe</a> | İngilizce
+       <a href="/README-en.md" style="margin-left: 5px">İngilizce</a> | Türkçe
     </p>
     <p align="center">
         <a href="https://github.com/maillab/cloud-mail/tree/main?tab=MIT-1-ov-file" target="_blank" >
