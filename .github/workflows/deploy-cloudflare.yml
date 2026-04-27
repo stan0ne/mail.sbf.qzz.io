@@ -35,30 +35,30 @@ jobs:
 
 
     steps:
-      - name: 🚚 检出代码仓库 / Checkout repository
+      - name: 🚚 Repoya Gözat / Checkout repository
         uses: actions/checkout@v4
 
-      - name: ⚙ 设置 pnpm / Set up pnpm
+      - name: ⚙ Kur pnpm / Set up pnpm
         uses: pnpm/action-setup@v4.1.0
         with:
           version: latest
 
-      - name: ⚙ 设置 Node.js / Set up Node.js
+      - name: ⚙ Kur Node.js / Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: "20"
           cache: "pnpm"
           cache-dependency-path: "./mail-worker/pnpm-lock.yaml"
 
-      - name: 📦 安装依赖 / Install dependencies
+      - name: 📦 Yükle / Install dependencies
         run: pnpm install --frozen-lockfile
         working-directory: ./mail-worker
 
-      - name: 📡 禁用 Wrangler 遥测 / Disable wrangler telemetry
+      - name: 📡 Wrangler telemetrisini kapat / Disable wrangler telemetry
         working-directory: ./mail-worker
         run: pnpm wrangler telemetry disable
 
-      - name: 🛠️ 设置环境 / Set up environment
+      - name: 🛠️ Ortam değişkenlerini ayarla / Set up environment
         working-directory: ./mail-worker
         run: |
           
@@ -125,7 +125,7 @@ jobs:
           
           echo "✅ Environment setup completed."
 
-      - name: ⚡ 设置KV数据库 / Set up KV database
+      - name: ⚡ KV veritabanını ayarla / Set up KV database
         working-directory: ./mail-worker
         run: |
           
@@ -163,7 +163,7 @@ jobs:
           sed -i "s|\${KV_NAMESPACE_ID}|$KV_ID|g" "$CONFIG_FILE"
           echo "✅ Setup completed."
 
-      - name: 🐬 设置D1数据库 / Set up D1 database
+      - name: 🐬 D1 veritabanını ayarla / Set up D1 database
         working-directory: ./mail-worker
         run: |
           
@@ -201,7 +201,7 @@ jobs:
           sed -i "s|\${D1_DATABASE_ID}|$D1_ID|g" "$CONFIG_FILE"
           echo "✅ Setup completed."
 
-      - name: 🚀 开始部署 / Start deployment
+      - name: 🚀 Dağıtımı başlat / Start deployment
         id: deploy
         working-directory: ./mail-worker
         run: |
@@ -226,7 +226,7 @@ jobs:
           echo "worker_url=$WORKER_URL" >> $GITHUB_OUTPUT
           echo "✅ Setup completed."
 
-      - name: ♻️ 初始化数据库 / Initialize database
+      - name: ♻️ Veritabanını başlat / Initialize database
         run: |
           echo "🛠️ Starting database initialization..."
           sleep 15
@@ -249,7 +249,7 @@ jobs:
             exit 1
           fi
 
-      - name: 🗑️ 删除运行记录 / Delete workflow runs
+      - name: 🗑️ Çalışan workflowları sil / Delete workflow runs
         uses: GitRML/delete-workflow-runs@main
         continue-on-error: true
         with:
