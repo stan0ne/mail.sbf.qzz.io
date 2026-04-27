@@ -90,46 +90,47 @@ Sadece tek bir alan adı ile büyük e-posta platformlarına benzer şekilde bir
 
 ```
 cloud-mail
-├── mail-worker                    # Backend worker projesi
+├── mail-worker					# Backend worker projesi
 │   ├── src
-│   │   ├── api                     # API katmanı
-│   │   ├── const                   # Proje sabitleri
-│   │   ├── dao                  # Veri erişim katmanı
-│   │   ├── email                 # E-posta işleme ve yönetimi
-│   │   ├── entity                 # Veritabanı varlıkları
-│   │   ├── error                 # Özel istisnalar
-│   │   ├── hono                 # Web framework, middleware, hata yönetimi
-│   │   ├── i18n                 # Uluslararasılaştırma
-│   │   ├── init                 # Veritabanı ve önbellek başlatma
-│   │   ├── model                 # Yanıt veri modelleri
-│   │   ├── security             # Kimlik doğrulama ve yetkilendirme
-│   │   ├── service                 # İş mantığı katmanı
-│   │   ├── template             # Mesaj şablonları
-│   │   ├── utils                 # Yardımcı fonksiyonlar
-│   │   └── index.js             # Giriş noktası
-│   ├── package.json             # Proje bağımlılıkları
-│   └── wrangler.toml             # Proje yapılandırması
+│   │   ├── api					# API katmanı
+│   │   ├── const				# Proje sabitleri
+│   │   ├── dao					# Veri erişim katmanı
+│   │   ├── email				# E-posta işleme ve yönetimi
+│   │   ├── entity				# Veritabanı varlıkları
+│   │   ├── error				# Özel istisnalar
+│   │   ├── hono				# Web framework, middleware, hata yönetimi
+│   │   ├── i18n				# Uluslararasılaştırma
+│   │   ├── init				# Veritabanı ve önbellek başlatma
+│   │   ├── model				# Yanıt veri modelleri
+│   │   ├── security			# Kimlik doğrulama ve yetkilendirme
+│   │   ├── service				# İş mantığı katmanı
+│   │   ├── template			# Mesaj şablonları
+│   │   ├── utils				# Yardımcı fonksiyonlar
+│   │   └── index.js			# Giriş noktası
+│   ├── package.json			# Proje bağımlılıkları
+│   └── wrangler.toml			# Proje yapılandırması
 │
-├─ mail-vue                        # Frontend Vue projesi
+├─ mail-vue						# Frontend Vue projesi
 │   ├── src
-│   │   ├── axios                  # Axios yapılandırması
-│   │   ├── components             # Özel bileşenler
-│   │   ├── echarts                 # ECharts entegrasyonu
-│   │   ├── i18n                 # Uluslararasılaştırma
-│   │   ├── init                 # Başlangıç başlatma işlemleri
-│   │   ├── layout                 # Ana düzen bileşenleri
-│   │   ├── perm                 # İzinler ve erişim kontrolü
-│   │   ├── request                 # API istek katmanı
-│   │   ├── router                 # Router yapılandırması
-│   │   ├── store                 # Global durum yönetimi
-│   │   ├── utils                 # Yardımcı fonksiyonlar
-│   │   ├── views                 # Sayfa bileşenleri
-│   │   ├── app.vue                 # Kök bileşen
-│   │   ├── main.js                 # Giriş JS dosyası
-│   │   └── style.css             # Global stiller
-│   ├── package.json             # Proje bağımlılıkları
-└── └── env.release                 # Ortam yapılandırması
+│   │   ├── axios				# Axios yapılandırması
+│   │   ├── components			# Özel bileşenler
+│   │   ├── echarts				# ECharts entegrasyonu
+│   │   ├── i18n				# Uluslararasılaştırma
+│   │   ├── init				# Başlangıç başlatma işlemleri
+│   │   ├── layout				# Ana düzen bileşenleri
+│   │   ├── perm				# İzinler ve erişim kontrolü
+│   │   ├── request 			# API istek katmanı
+│   │   ├── router				# Router yapılandırması
+│   │   ├── store 				# Global durum yönetimi
+│   │   ├── utils				# Yardımcı fonksiyonlar
+│   │   ├── views				# Sayfa bileşenleri
+│   │   ├── app.vue				# Kök bileşen
+│   │   ├── main.js				# Giriş JS dosyası
+│   │   └── style.css			# Global stiller
+│   ├── package.json			# Proje bağımlılıkları
+└── └── env.release				# Ortam yapılandırması
 
+```
 
 ## Destek
 
