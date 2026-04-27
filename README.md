@@ -92,7 +92,6 @@ Sadece tek bir alan adı ile büyük e-posta platformlarına benzer şekilde bir
 cloud-mail
 ├── mail-worker                    # Backend worker projesi
 │   ├── src
-
 │   │   ├── api                     # API katmanı
 │   │   ├── const                   # Proje sabitleri
 │   │   ├── dao                  # Veri erişim katmanı
