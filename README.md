@@ -1,9 +1,9 @@
 <p align="center">
     <img src="doc/demo/logo.png" width="80px" />
     <h1 align="center">Cloud Mail</h1>
-    <p align="center">基于 Cloudflare 的简约响应式邮箱服务，支持邮件发送、附件收发 🎉</p> 
+    <p align="center">Cloudflare Workers üzerinde çalışmak üzere tasarlanmış basit, duyarlı bir e-posta hizmeti 🎉</p> 
     <p align="center">
-        简体中文 | <a href="/README-en.md" style="margin-left: 5px">English </a>
+       <a href="/README-en.md" style="margin-left: 5px">Türkçe</a> | İngilizce
     </p>
     <p align="center">
         <a href="https://github.com/maillab/cloud-mail/tree/main?tab=MIT-1-ov-file" target="_blank" >
@@ -29,128 +29,119 @@
     </p>
 </p>
 
+## Açıklama
+Sadece tek bir alan adı ile büyük e-posta platformlarına benzer şekilde birden fazla farklı e-posta adresi oluşturabilirsiniz. Bu proje, sunucu maliyetlerini düşürmek ve kendi e-posta hizmetinizi oluşturmak için Cloudflare Workers üzerinde yayına alınabilir.
 
-## 项目简介
+## Proje Önizlemesi
 
-只需要一个域名，就可以创建多个不同的邮箱，类似各大邮箱平台，本项目支持署到 Cloudflare Workers ，降低服务器成本，搭建自己的邮箱服务
+- [Canlı Demo](https://skymail.ink)<br>
+- [Kurulum Kılavuzu](https://doc.skymail.ink/en/)<br>
 
-## 项目展示
-
-- [在线演示](https://skymail.ink)<br>
-- [部署文档](https://doc.skymail.ink)<br>
 
 | ![](/doc/demo/demo1.png) | ![](/doc/demo/demo2.png) |
-|-----------------------|-----------------------|
+|--------------------------|--------------------------|
 | ![](/doc/demo/demo3.png) | ![](/doc/demo/demo4.png) |
 
+## Özellikler
 
+- **💰 Düşük Maliyetli Kullanım**: Sunucu gerektirmez — maliyetleri azaltmak için Cloudflare Workers'a kurun.
 
+- **💻 Duyarlı Tasarım**: Hem masaüstü hem de çoğu mobil tarayıcıya otomatik olarak uyum sağlar.
 
-## 功能介绍
+- **📧 E-posta Gönderimi**: Toplu e-posta gönderimini ve ekleri destekleyen Resend ile entegredir.
 
-- **💰 低成本使用**： 可部署到 Cloudflare Workers 降低服务器成本
+- **🛡️ Yönetici Özellikleri**: RBAC tabanlı erişim kontrolü ile kullanıcı ve e-posta yönetimi için yönetici kontrolleri.
 
-- **💻 响应式设计**：响应式布局自动适配PC和大部分手机端浏览器
+- **📦 Ek Desteği**: R2 nesne depolama aracılığıyla saklanan ve indirilen ekleri gönderip alın.
 
-- **📧 邮件发送**：集成Resend发送邮件，支持群发，内嵌图片和附件发送，发送状态查看
+- **🔔 E-posta Yönlendirme**: Alınan e-postaları Telegram botlarına veya diğer e-posta sağlayıcılarına yönlendirin.
 
-- **🛡️ 管理员功能**：可以对用户，邮件进行管理，RABC权限控制对功能及使用资源限制
+- **📡 Açık API**: API aracılığıyla toplu kullanıcı oluşturmayı ve çok koşullu e-posta sorgularını destekler.
 
-- **📦 附件收发**：支持收发附件，使用R2对象存储保存和下载文件
+- **📈 Veri Görselleştirme**: Kullanıcı e-posta büyümesi dahil sistem verilerini görselleştirmek için ECharts kullanın.
 
-- **🔔 邮件推送**：接收邮件后可以转发到TG机器人或其他服务商邮箱
+- **🎨 Kişiselleştirme**: Web sitesi başlığını, giriş arka planını ve şeffaflığı özelleştirin.
 
-- **📡 开放API**：支持使用API批量生成用户，多条件查询邮件 
+- **🤖 CAPTCHA**: Otomatik kaydı önlemek için Turnstile CAPTCHA ile entegre edilmiştir.
 
-- **📈 数据可视化**：使用ECharts对系统数据详情，用户邮件增长可视化显示
+- **📜 Daha Fazla Özellik**: Geliştirilme aşamasında...
 
-- **🎨 个性化设置**：可以自定义网站标题，登录背景，透明度
+## Teknoloji Yığını
 
-- **🤖 人机验证**：集成Turnstile人机验证，防止人机批量注册
+- **Platform**: [Cloudflare Workers](https://developers.cloudflare.com/workers/)
 
-- **📜 更多功能**：正在开发中...
+- **Web Framework**: [Hono](https://hono.dev/)
 
+- **ORM**: [Drizzle](https://orm.drizzle.team/)
 
+- **Frontend Framework**: [Vue3](https://vuejs.org/)
 
-## 技术栈
+- **UI Framework**: [Element Plus](https://element-plus.org/)
 
-- **平台**：[Cloudflare Workers](https://developers.cloudflare.com/workers/)
+- **E-posta Hizmeti**: [Resend](https://resend.com/)
 
-- **Web框架**：[Hono](https://hono.dev/)
+- **Önbellek**: [Cloudflare KV](https://developers.cloudflare.com/kv/)
 
-- **ORM：**[Drizzle](https://orm.drizzle.team/)
+- **Veritabanı**: [Cloudflare D1](https://developers.cloudflare.com/d1/)
 
-- **前端框架**：[Vue3](https://vuejs.org/) 
+- **Dosya Depolama**: [Cloudflare R2](https://developers.cloudflare.com/r2/)
 
-- **UI框架**：[Element Plus](https://element-plus.org/) 
-
-- **邮件推送：** [Resend](https://resend.com/)
-
-- **缓存**：[Cloudflare KV](https://developers.cloudflare.com/kv/)
-
-- **数据库**：[Cloudflare D1](https://developers.cloudflare.com/d1/)
-
-- **文件存储**：[Cloudflare R2](https://developers.cloudflare.com/r2/)
-
-## 目录结构
+## Proje Yapısı
 
 ```
 cloud-mail
-├── mail-worker				    # worker后端项目
-│   ├── src                  
-│   │   ├── api	 			    # api接口层			
-│   │   ├── const  			    # 项目常量
-│   │   ├── dao                 # 数据访问层
-│   │   ├── email			    # 邮件处理接收
-│   │   ├── entity			    # 数据库实体
-│   │   ├── error			    # 自定义异常
-│   │   ├── hono			    # web框架配置、拦截器、全局异常等
-│   │   ├── i18n			    # 语言国际化
-│   │   ├── init			    # 数据库缓存初始化
-│   │   ├── model			    # 响应体数据封装
-│   │   ├── security			# 身份权限认证
-│   │   ├── service			    # 业务服务层
-│   │   ├── template			# 消息模板
-│   │   ├── utils			    # 工具类
-│   │   └── index.js			# 入口文件
-│   ├── pageckge.json			# 项目依赖
-│   └── wrangler.toml			# 项目配置
-│
-├── mail-vue				    # vue前端项目
+├── mail-worker                    # Backend worker projesi
 │   ├── src
-│   │   ├── axios 			    # axios配置
-│   │   ├── components			# 自定义组件
-│   │   ├── echarts			    # echarts组件导入
-│   │   ├── i18n			    # 语言国际化
-│   │   ├── init			    # 入站初始化
-│   │   ├── layout			    # 主体布局组件
-│   │   ├── perm			    # 权限认证
-│   │   ├── request			    # api接口
-│   │   ├── router			    # 路由配置
-│   │   ├── store			    # 全局状态管理
-│   │   ├── utils			    # 工具类
-│   │   ├── views			    # 页面组件
-│   │   ├── app.vue			    # 入口组件
-│   │   ├── main.js			    # 入口js
-│   │   └── style.css			# 全局css
-│   ├── package.json			# 项目依赖
-└── └── env.release				# 项目配置
-```
 
-## 赞助
+│   │   ├── api                     # API katmanı
+│   │   ├── const                   # Proje sabitleri
+│   │   ├── dao                  # Veri erişim katmanı
+│   │   ├── email                 # E-posta işleme ve yönetimi
+│   │   ├── entity                 # Veritabanı varlıkları
+│   │   ├── error                 # Özel istisnalar
+│   │   ├── hono                 # Web framework, middleware, hata yönetimi
+│   │   ├── i18n                 # Uluslararasılaştırma
+│   │   ├── init                 # Veritabanı ve önbellek başlatma
+│   │   ├── model                 # Yanıt veri modelleri
+│   │   ├── security             # Kimlik doğrulama ve yetkilendirme
+│   │   ├── service                 # İş mantığı katmanı
+│   │   ├── template             # Mesaj şablonları
+│   │   ├── utils                 # Yardımcı fonksiyonlar
+│   │   └── index.js             # Giriş noktası
+│   ├── package.json             # Proje bağımlılıkları
+│   └── wrangler.toml             # Proje yapılandırması
+│
+├─ mail-vue                        # Frontend Vue projesi
+│   ├── src
+│   │   ├── axios                  # Axios yapılandırması
+│   │   ├── components             # Özel bileşenler
+│   │   ├── echarts                 # ECharts entegrasyonu
+│   │   ├── i18n                 # Uluslararasılaştırma
+│   │   ├── init                 # Başlangıç başlatma işlemleri
+│   │   ├── layout                 # Ana düzen bileşenleri
+│   │   ├── perm                 # İzinler ve erişim kontrolü
+│   │   ├── request                 # API istek katmanı
+│   │   ├── router                 # Router yapılandırması
+│   │   ├── store                 # Global durum yönetimi
+│   │   ├── utils                 # Yardımcı fonksiyonlar
+│   │   ├── views                 # Sayfa bileşenleri
+│   │   ├── app.vue                 # Kök bileşen
+│   │   ├── main.js                 # Giriş JS dosyası
+│   │   └── style.css             # Global stiller
+│   ├── package.json             # Proje bağımlılıkları
+└── └── env.release                 # Ortam yapılandırması
 
-<a href="https://doc.skymail.ink/support.html" >
+
+## Destek
+
+<a href="https://doc.skymail.ink/support.html">
 <img width="170px" src="./doc/images/support.png" alt="">
 </a>
 
-## 许可证
+## Lisans
 
-本项目采用 [MIT](LICENSE) 许可证	
+Bu proje [MIT](LICENSE) lisansı altında lisanslanmıştır.
 
-
-## 交流
+## İletişim
 
 [Telegram](https://t.me/cloud_mail_tg)
-
-
-
