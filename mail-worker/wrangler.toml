@@ -1,4 +1,5 @@
-name = "cloud-mail"
+#name = "cloud-mail"
+name = 'mail-sbf-qzz-io'
 main = "src/index.js"
 compatibility_date = "2025-06-04"
 keep_vars = true
